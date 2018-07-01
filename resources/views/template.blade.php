@@ -8,7 +8,6 @@
 
 <body>
 <div id="page-container" class="sidebar-l sidebar-mini sidebar-o side-scroll header-navbar-fixed header-navbar-transparent">
-    @include('partials.topbar')
     @include('partials.sidebar')
     @include('partials.header')
     <main id="main-container">

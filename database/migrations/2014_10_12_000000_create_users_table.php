@@ -18,8 +18,17 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('dni')->nullable()->default(null);
+
+            $table->integer('prepaid_id')->default(1);
+            $table->integer('role_id')->unsigned()->index()->default(1);
+
+            $table->foreign('prepaid_id')->references('id')->on('prepaids')->onDelete('cascade');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+
             $table->rememberToken();
             $table->timestamps();
+
         });
     }
 
