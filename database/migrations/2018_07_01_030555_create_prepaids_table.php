@@ -15,6 +15,7 @@ class CreatePrepaidsTable extends Migration
     {
         Schema::create('prepaids', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('prepaid')->nullable()->default(null);
             $table->timestamps();
         });
     }
