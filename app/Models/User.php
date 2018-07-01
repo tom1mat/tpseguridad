@@ -38,7 +38,7 @@ class User extends Authenticatable
             return false;
     }
 
-    public function getUserRole(){
+    public function getUserRoleId(){
         return $this->role->id;
     }
 }

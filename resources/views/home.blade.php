@@ -23,31 +23,34 @@
         <table class="table table-striped table-borderless table-hover">
             <thead>
             <tr>
+                <th>ID</th>
                 <th>Usuario</th>
-                <th>Type</th>
-                <th>Brand</th>
-                <th>Description</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Rol</th>
+                <th>Email</th>
+                <th>DNI</th>
+                <th>Cobertura Médica</th>
             </tr>
             </thead>
 
             <tbody>
                 <tr class="danger">
-                    <td>28/03/2018 11:00</td>
-                    <td>Data complaint</td>
-                    <td>Pepsi</td>
-                    <td>SKU 0075001901023123 image outdated</td>
-                    <td>Pending</td>
+                    @php $user = \Illuminate\Support\Facades\Auth::user(); @endphp
+                    @if(!is_null($user))
+                    <td>{{ $user->id }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->role->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->dni }}</td>
+                    <td>{{ $user->prepaid->name }}</td>
                     <td>
                         <div class="btn-group">
                             <div class="btn-group">
                                 <a><i class="fa fa-lg action fa-search"></i></a>
                                 <a><i class="fa fa-lg action fa-check"></i></a>
-                                <a><i class="fa fa-lg danger fa-ban"></i></a>
                             </div>
                         </div>
                     </td>
+                    @endif
                 </tr>
             </tbody>
         </table>

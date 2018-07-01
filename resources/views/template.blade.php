@@ -24,7 +24,7 @@
             <!-- Copyright Info -->
             <div class="font-s12 push-20 clearfix">
                 <div class="pull-right">
-                    By <a href="http://www.bits0.com" class="orange">Tomás Mateo | Franco Petrone | Agustín Fontonva</a>
+                    By <a href="https://davinci.edu.ar/" class="orange">Tomás Mateo | Franco Petrone | Agustín Fontova</a>
                 </div>
                  </div>
             <!-- END Copyright Info -->
