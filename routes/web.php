@@ -31,7 +31,7 @@ Route::group(["prefix" => "user", "middleware" => "auth"],function(){
     ]);
 
     // Group:Paciente
-    Route::group(["prefix" => "patient", "middleware" => "patient"],function(){
+    Route::group(["prefix" => "patient", "middleware" => "isAllowed"],function(){
         Route::get("/",[ // Shifts
             "as" => "patient.shifts.index",
             "uses" => "PatientController@index",
@@ -59,7 +59,7 @@ Route::group(["prefix" => "user", "middleware" => "auth"],function(){
     });
 
     // Group:Secretaria
-    Route::group(["prefix" => "secretary", "middleware" => "secretary"],function(){
+    Route::group(["prefix" => "secretary", "middleware" => "isAllowed"],function(){
         Route::get("/",[ // Users
             "as" => "secretary.users.index",
             "uses" => "SecretaryController@index",
@@ -75,7 +75,7 @@ Route::group(["prefix" => "user", "middleware" => "auth"],function(){
     });
 
     // Group:Médico
-    Route::group(["prefix" => "doctor", "middleware" => "doctor"],function(){
+    Route::group(["prefix" => "doctor", "middleware" => "isAllowed"],function(){
         Route::get("/",[ // Users
             "as" => "doctor.users.index",
             "uses" => "DoctorController@index",
@@ -91,7 +91,7 @@ Route::group(["prefix" => "user", "middleware" => "auth"],function(){
     });
 
     // Group:Administrador
-    Route::group(["prefix" => "admin", "middleware" => "admin"],function(){
+    Route::group(["prefix" => "admin", "middleware" => "isAllowed"],function(){
         Route::get("/",[ // Users
             "as" => "admin.users.index",
             "uses" => "AdminController@index",
