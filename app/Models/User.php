@@ -37,4 +37,8 @@ class User extends Authenticatable
         else
             return false;
     }
+
+    public function getUserRole(){
+        return $this->role->id;
+    }
 }

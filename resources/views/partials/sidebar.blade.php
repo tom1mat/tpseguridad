@@ -24,21 +24,8 @@
             <!-- Side Content -->
             <div class="side-content side-content-full">
                 <ul class="nav-main">
-                    <li class="open">
-                        <a ><i style="margin-right: 15px;" class="fa fa-2x fa-plus-square"></i><span class="sidebar-mini-hide">CONSULTORIO</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Usuarios</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-2x fa-user-plus"></i><span class="sidebar-mini-hide">Nuevo Usuario</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i style="margin-right: 25px !important; margin-left: 5px !important;" class="fa fa-2x  fa-question"></i><span class="sidebar-mini-hide">FAQ</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i style="margin-right: 15px;" class="fa fa-2x  fa-power-off"></i><span class="sidebar-mini-hide">Cerrar Sesión</span></a>
-                    </li>
+
+
                 </ul>
             </div>
             <!-- END Side Content -->

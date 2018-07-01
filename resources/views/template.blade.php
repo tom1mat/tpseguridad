@@ -24,7 +24,7 @@
             <!-- Copyright Info -->
             <div class="font-s12 push-20 clearfix">
                 <div class="pull-right">
-                    Powered by <a href="http://www.bits0.com" class="orange">Bits0.com</a>
+                    By <a href="http://www.bits0.com" class="orange">Tomás Mateo | Franco Petrone | Agustín Fontonva</a>
                 </div>
                  </div>
             <!-- END Copyright Info -->
