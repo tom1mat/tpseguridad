@@ -21,6 +21,11 @@ Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
 
+// FAQ (Ayuda)
+Route::get('/calendar', function () {
+    return view('patient.shifts.create');
+})->name('calendar');
+
 // Groups:All Users
 Route::group(["prefix" => "user", "middleware" => "auth"],function(){
 
