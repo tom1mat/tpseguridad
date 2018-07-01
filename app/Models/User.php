@@ -32,7 +32,7 @@ class User extends Authenticatable
     }
 
     public function isAllowed($roleId){
-        if($roleId <= $this->role->id)
+        if($roleId == $this->role->id)
             return true;
         else
             return false;

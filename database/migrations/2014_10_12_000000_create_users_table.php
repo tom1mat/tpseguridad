@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('dni')->nullable()->default(null);
 
-            $table->integer('prepaid_id')->unsigned()->index()->default(1);
+            $table->integer('prepaid_id')->unsigned()->index()->default(null);
             $table->integer('role_id')->unsigned()->index()->default(1);
 
             $table->foreign('prepaid_id')->references('id')->on('prepaids')->onDelete('cascade');
