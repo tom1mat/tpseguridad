@@ -3,49 +3,23 @@
 @section('main')
 
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 style="margin-bottom: 12px;"><i class="fa fa-x2 fa-cogs"></i> Workflow</h3>
+        <h3 style="margin-bottom: 12px;"><i class="fa fa-plus-square"></i> CONSULTORIO</h3>
 
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding: 0 !important;">
-            <form class="form-inline pull-left">
-                <div class="form-group ">
-                    <div class="input-group ">
-                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Keyword">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-orange">Search</button>
-            </form>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0 !important; margin-bottom: 12px; color:green;">
+            <h4>PACIENTES</h4>
         </div>
 
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding: 0 !important;">
-
-            <form class="form-inline pull-right">
-
-                <div class="form-group">
-                    <label style="float: left; margin: 7px; font-size: 14px;">Date from</label>
-                    <div class="input-group">
-                        <input type="date" class="form-control" id="exampleInputAmount" placeholder="Keyword">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label style="float: left; margin: 7px; font-size: 14px;">Date to</label>
-                    <div class="input-group">
-                        <input type="date" class="form-control" id="exampleInputAmount" placeholder="Keyword">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-orange">Filter</button>
-
-            </form>
+            <h4>Título A</h4>
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0 !important; margin-top: 12px;">
-            <a href="" class="btn btn-orange" type="button"> Keyword <span class=""><i class="fa fa-times-circle"></i></span></a>
-            <a href="" class="btn btn-orange" type="button"> 01/01/18 to 12/01/18  <span class=""><i class="fa fa-times-circle"></i></span></a>
-
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding: 0 !important;">
+            <h4>Título B</h4>
         </div>
 
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <h4>Sarasa</h4>
 
         <table class="table table-striped table-borderless table-hover">
             <thead>
