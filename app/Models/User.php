@@ -38,7 +38,24 @@ class User extends Authenticatable
             return false;
     }
 
+    public function getDoctors(){
+
+    }
+
     public function getUserRoleId(){
         return $this->role->id;
     }
+
+    public function patientShifts(){
+        return $this->hasMany(Shift::class, 'patient_id');
+    }
+
+    public function doctorShifts(){
+        return $this->hasMany(Shift::class, 'doctor_id');
+    }
+
+    public function prepaid(){
+        return $this->hasOne(Prepaid::class, 'id', 'prepaidId');
+    }
+
 }

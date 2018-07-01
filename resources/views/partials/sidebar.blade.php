@@ -29,6 +29,7 @@
                         <li class="open">
                             <a ><i style="margin-right: 15px; color: #0f8496;" class="fa fa-2x fa-plus-square"></i><span class="sidebar-mini-hide">CONSULTORIO</span></a>
                         </li>
+                        {{-- PACIENTE --}}
                         @if($user->isAllowed(1))
                             <li>
                                 <a href="{{ route('patient.shifts.index') }}"><i class="fa fa-2x fa-newspaper-o"></i><span class="sidebar-mini-hide">Mis Turnos</span></a>
@@ -37,26 +38,41 @@
                                 <a href="{{ route('patient.shifts.create') }}"><i class="fa fa-2x fa-plus"></i><span class="sidebar-mini-hide">Nuevo Turno</span></a>
                             </li>
                         @endif
+                        {{-- END PACIENTE --}}
+
+
                         @if($user->getUserRoleId() >= 2)
+                            {{-- SECRETARIA --}}
                             @if($user->isAllowed(2))
                                 <li>
                                     <a href="{{ route('secretary.users.index') }}"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Usuarios</span></a>
                                 </li>
+                            {{-- END SECRETARIA --}}
+                            {{-- DOCTOR --}}
                             @elseif($user->isAllowed(3))
                                 <li>
                                     <a href="{{ route('doctor.users.index') }}"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Usuarios</span></a>
                                 </li>
+                            {{-- END DOCTOR --}}
+
+                            {{-- ADMIN --}}
                             @elseif($user->isAllowed(4))
                                 <li>
-                                    <a href="{{ route('admin.users.index') }}"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Usuarios</span></a>
+                                    <a href="{{ route('admin.index') }}"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Usuarios</span></a>
                                 </li>
                             @endif
+                            {{-- END ADMIN --}}
                         @endif
+
+
+                        {{-- ADMIN --}}
                         @if($user->isAllowed(4))
                             <li>
                                 <a href="{{ route('admin.users.create') }}"><i class="fa fa-2x fa-user-plus"></i><span class="sidebar-mini-hide">Nuevo Usuario</span></a>
                             </li>
                         @endif
+                        {{-- END ADMIN --}}
+
                         <li>
                             <a href="{{ route('faq') }}"><i style="margin-right: 25px !important; margin-left: 5px !important;" class="fa fa-2x fa-question"></i><span class="sidebar-mini-hide">FAQ</span></a>
                         </li>
