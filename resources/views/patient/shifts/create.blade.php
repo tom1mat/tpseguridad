@@ -7,11 +7,12 @@
         }
         .bg-gray-lighter > a{
             color: #0b0b0b;
+            font-weight: bold;
         }
     </style>
     <div class="block block-bordered">
         <div class="block-header bg-gray-lighter" style="border-bottom: 0">
-            <a href="{{ route("patient.shifts.create") }}"><span style="color: white">PACIENTE > NUEVO TURNO</span></a>
+            <a href="{{ route("patient.shifts.create") }}"><span>PACIENTE > NUEVO TURNO</span></a>
         </div>
         <div class="block-content block-content-full bg-light-orange ribbon ribbon-crystal mb-20">
             <div class="text-center push-50-t push-50">
