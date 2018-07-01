@@ -16,13 +16,13 @@ class CreateShiftsTable extends Migration
         Schema::create('shifts', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->date('deliverDate')->nullable()->default(null);
-            $table->string('horario')->nullable()->default(null);
+            $table->date('date')->nullable()->default(null);
+            $table->string('time')->nullable()->default(null);
 
-            $table->integer('user_id')->default(1);
-            $table->integer('doctor_id')->default(1);
+            $table->integer('patient_id')->unsigned()->index();
+            $table->integer('doctor_id')->unsigned()->index();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('patient_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
