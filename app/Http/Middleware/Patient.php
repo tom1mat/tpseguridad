@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class IsAllowed
+class Patient
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,7 @@ class IsAllowed
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->isAllowed())
+        if (Auth::check() && Auth::user()->isAllowed(1))
         {
             return $next($request);
         }

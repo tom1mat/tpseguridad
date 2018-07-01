@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Shift;
 use Illuminate\Http\Request;
 
 class ShiftController extends Controller
 {
-    public function index(){
-        $shiftsArray =  ShiftController::all();
+    public function create(){
+        $shiftsArray = Shift::all();
 
-//        return
+        return view("patient.shifts.create", compact('shiftsArray'));
     }
+
 }

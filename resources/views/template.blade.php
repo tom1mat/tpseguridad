@@ -1,3 +1,4 @@
+@php $loggedUser = \Illuminate\Support\Facades\Auth::user(); @endphp
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,9 +12,16 @@
     @include('partials.sidebar')
     @include('partials.header')
     <main id="main-container">
-        <div class="content">
-            <div class="row animated fadeIn" style="margin-top: 25px;">
-                @include('partials.notifications')
+        <div class="content animated fadeIn">
+            @include('partials.notifications')
+            <div class="row" style="margin-top: 25px;">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 12px; color:green;">
+                        <p style="color: black;">{{ $loggedUser->role->role }}</p>
+                        <p>{{ $loggedUser->name }}</p>
+                        <p>{{ $loggedUser->email }}</p>
+                    </div>
+                </div>
                 @yield('main')
             </div>
         </div>

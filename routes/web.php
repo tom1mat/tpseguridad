@@ -15,6 +15,9 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/home', function () {
+    return view('home');
+});
 
 // FAQ (Ayuda)
 Route::get('/faq', function () {
@@ -26,24 +29,23 @@ Route::get('/calendar', function () {
     return view('patient.shifts.create');
 })->name('calendar');
 
+// LogOut
+Route::get('/logout', [
+    'as' => 'logout',
+    'uses' => 'HomeController@logout'
+]);
+
 // Groups:All Users
-Route::group(["prefix" => "user", "middleware" => "auth"],function(){
-
-    // LogOut
-    Route::get('/logout', [
-        'as' => 'logout',
-        'uses' => 'Auth\LoginController@logout'
-    ]);
-
+Route::group(["middleware" => "auth"],function(){
     // Group:Paciente
-    Route::group(["prefix" => "patient", "middleware" => "isAllowed"],function(){
+    Route::group(["prefix" => "patient", "middleware" => "Patient" ],function(){
         Route::get("/",[ // Shifts
             "as" => "patient.shifts.index",
             "uses" => "PatientController@index",
         ]);
         Route::get("/create",[ // Create Shift
             "as" => "patient.shifts.create",
-            "uses" => "PatientController@create",
+            "uses" => "ShiftController@create",
         ]);
         Route::get("/edit/{id}",[ // Edit Shift
             "as" => "patient.shifts.edit",
@@ -64,7 +66,7 @@ Route::group(["prefix" => "user", "middleware" => "auth"],function(){
     });
 
     // Group:Secretaria
-    Route::group(["prefix" => "secretary", "middleware" => "isAllowed"],function(){
+    Route::group(["prefix" => "secretary", "middleware" => "Secretary"],function(){
         Route::get("/",[ // Users
             "as" => "secretary.users.index",
             "uses" => "SecretaryController@index",
@@ -79,8 +81,8 @@ Route::group(["prefix" => "user", "middleware" => "auth"],function(){
         ]);
     });
 
-    // Group:Médico
-    Route::group(["prefix" => "doctor", "middleware" => "isAllowed"],function(){
+    // Group:doctor
+    Route::group(["prefix" => "doctor", "middleware" => "Doctor"],function(){
         Route::get("/",[ // Users
             "as" => "doctor.users.index",
             "uses" => "DoctorController@index",
@@ -96,30 +98,30 @@ Route::group(["prefix" => "user", "middleware" => "auth"],function(){
     });
 
     // Group:Administrador
-    Route::group(["prefix" => "admin", "middleware" => "isAllowed"],function(){
+    Route::group(["prefix" => "admin", "middleware" => "Admin"],function(){
         Route::get("/",[ // Users
-            "as" => "admin.users.index",
+            "as" => "admin.index",
             "uses" => "AdminController@index",
         ]);
         Route::get("/create",[ // Create User
             "as" => "admin.users.create",
-            "uses" => "AdminController@create",
+            "uses" => "AdminController@createUser",
         ]);
         Route::get("/edit/{id}",[ // Edit User (All)
             "as" => "admin.users.edit",
-            "uses" => "AdminController@edit",
+            "uses" => "AdminController@editUser",
         ]);
         Route::put("/update/{id}",[ // Update Action
             "as" => "admin.users.update",
-            "uses" => "AdminController@update",
+            "uses" => "AdminController@updateUser",
         ]);
         Route::post("/store",[ // New User
             "as" => "admin.users.store",
-            "uses" => "AdminController@store",
+            "uses" => "AdminController@storeUser",
         ]);
         Route::delete("/destroy/{id}",[ // Destroy Action
             "as" => "admin.users.destroy",
-            "uses" => "AdminController@destroy",
+            "uses" => "AdminController@destroyUser",
         ]);
     });
 

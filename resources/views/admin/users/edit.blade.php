@@ -12,11 +12,14 @@
     </style>
     <div class="block block-bordered">
         <div class="block-header bg-gray-lighter" style="border-bottom: 0">
-            <a href="{{ route("patient.shifts.create") }}"><span>PACIENTE > NUEVO TURNO</span></a>
+            <a href="{{ route("patient.shifts.create") }}"><span>USUARIOS > EDITAR USUARIO</span></a>
         </div>
         <div class="block-content" style="padding: 0 35px">
             <div class="row">
                 {{ Form::open(['route' => 'patient.shifts.create', 'method' => 'POST']) }}
+                <div class="col-sm-12">
+                    <h3 style="margin: 0 0  20px 15px;">Add new Dynamic data</h3>
+                </div>
                 <div class="col-sm-12">
                     <div class="col-sm-4">
                         <div class="form-group">
@@ -39,6 +42,4 @@
                 <!-- END DYNAMIC DATA -->
                 </div>
             </div>
-        </div>
-    </div>
 @endsection
