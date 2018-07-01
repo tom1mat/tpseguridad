@@ -24,6 +24,7 @@ class UsersSeeder extends Seeder
             'name'      => 'Luciana Ramírez',
             'email'     => 'secretaria@gmail.com',
             'password'  => bcrypt('secretaria'),
+            'prepaid_id'=> null,
             'role_id'   => 2
         ]);
 
@@ -31,6 +32,7 @@ class UsersSeeder extends Seeder
             'name'      => 'Franco Petrone',
             'email'     => 'doctor@gmail.com',
             'password'  => bcrypt('doctor'),
+            'prepaid_id'=> null,
             'role_id'   => 3
         ]);
 
@@ -38,6 +40,7 @@ class UsersSeeder extends Seeder
             'name'      => 'Administrador',
             'email'     => 'admin@gmail.com',
             'password'  => bcrypt('admin'),
+            'prepaid_id'=> null,
             'role_id'   => 4
         ]);
     }
