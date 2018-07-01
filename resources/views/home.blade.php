@@ -38,10 +38,10 @@
                     @if(!is_null($user))
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
-                    <td>{{ $user->role->name }}</td>
+                    <td>{{ $user->role }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->dni }}</td>
-                    <td>{{ $user->prepaid->name }}</td>
+                    <td>{{ $user->prepaid }}</td>
                     <td>
                         <div class="btn-group">
                             <div class="btn-group">
