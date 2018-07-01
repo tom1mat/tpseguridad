@@ -25,73 +25,19 @@
             <div class="side-content side-content-full">
                 <ul class="nav-main">
                     <li class="open">
-                        <a ><i style="margin-right: 15px;" class="fa fa-2x fa-cogs"></i><span class="sidebar-mini-hide">Workflow</span></a>
-                    </li>
-                        <li>
-                            <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-2x  fa-barcode"></i><span class="sidebar-mini-hide">Skus</span></a>
-                            <ul>
-                                <li>
-                                    <a>View all skus</a>
-                                </li>
-                                <li>
-                                    <a >Create sku</a>
-                                </li>
-                            </ul>
-                        </li>
-                    <li>
-                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-2x fa-product-hunt"></i><span class="sidebar-mini-hide">Products</span></a>
-                        <ul>
-                            <li><a >View all products</a></li>
-                            {{--<li><a href="{{ route('panel.products.create') }}">Create product</a></li>--}}
-                        </ul>
+                        <a ><i style="margin-right: 15px;" class="fa fa-2x fa-plus-square"></i><span class="sidebar-mini-hide">CONSULTORIO</span></a>
                     </li>
                     <li>
-                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-2x  fa-image"></i><span class="sidebar-mini-hide">Econtent</span></a>
-                        <ul>
-                            <li>
-                                <a >Request econtent</a>
-
-                            </li>
-                        </ul>
+                        <a href="#"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Usuarios</span></a>
                     </li>
                     <li>
-                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-2x  fa-object-group"></i><span class="sidebar-mini-hide">Key Visuals</span></a>
-                        <ul>
-                            <li>
-                                <a >View all key visuals</a>
-                            </li>
-                            <li>
-                                <a>Create Key Visual</a>
-                            </li>
-                        </ul>
+                        <a href="#"><i class="fa fa-2x fa-user-plus"></i><span class="sidebar-mini-hide">Nuevo Usuario</span></a>
                     </li>
                     <li>
-                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-2x  fa-trademark"></i><span class="sidebar-mini-hide">Brands</span></a>
-                        <ul>
-                            <li>
-                                <a >View all brands</a>
-                            </li>
-                            <li>
-                                <a >Create brand</a>
-                            </li>
-                        </ul>
+                        <a href="#"><i style="margin-right: 25px !important; margin-left: 5px !important;" class="fa fa-2x  fa-question"></i><span class="sidebar-mini-hide">FAQ</span></a>
                     </li>
                     <li>
-                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-2x  fa-shopping-basket"></i><span class="sidebar-mini-hide">Categories</span></a>
-                        <ul>
-                            <li>
-                                <a >View all categories</a>
-                            </li>
-                            <li>
-                                <a >Create category</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a><i style="margin-right: 25px !important; margin-left: 5px !important;" class="fa fa-2x  fa-question"></i><span class="sidebar-mini-hide">Help</span></a>
-                    </li>
-                    <li>
-                        <a ><i style="margin-right: 15px;" class="fa fa-2x  fa-power-off"></i><span class="sidebar-mini-hide">Log Out</span></a>
+                        <a href="#"><i style="margin-right: 15px;" class="fa fa-2x  fa-power-off"></i><span class="sidebar-mini-hide">Cerrar Sesión</span></a>
                     </li>
                 </ul>
             </div>

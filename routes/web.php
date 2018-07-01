@@ -12,11 +12,9 @@
 */
 
 // Raiz
-Route::get("/",[
-    "as" => "home",
-    "uses" => "HomeController@index",
-    "middleware" => "auth",
-]);
+Route::get('/', function () {
+    return view('home');
+});
 
 // FAQ (Ayuda)
 Route::get('/faq', function () {
