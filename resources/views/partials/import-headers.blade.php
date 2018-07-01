@@ -19,7 +19,6 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" id="css-main" href="css/oneui.css">
 <link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/marginsAndPaddings.css">
 {{--<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>--}}
 <link src="css/main.css">
 

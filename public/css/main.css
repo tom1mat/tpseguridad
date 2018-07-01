@@ -1,0 +1,126 @@
+.button-lg{
+    height: 46px;
+    font-size: 15px;
+}
+.text-white{
+    color: white;
+}
+.big-button{
+    width: 100%;
+    height: 50px;
+
+    display: inline-block;
+    text-align:center;
+    /*line-height: 75px;*/
+    padding: 8px;
+    font-size: 25px;
+}
+
+.btn-action-form{
+    width: 40%;
+    display: inline;
+    color: white;
+}
+.btn-red{
+    background-color: #d6482f;
+    color: white;
+}
+.text-red{
+    color: #d6482f;
+}
+.block-title > a{
+    color: white;
+}
+.PUBLISHED-text{
+    color: #7cb065;
+}
+.PENDING-text{
+    color: #d6482f;
+}
+.RESOLVED-text{
+    color: #7cb065 !important;
+}
+.PUBLISHED{
+    background-color: #7cb065 !important;
+}
+.PENDING{
+    background-color: #d6482f !important;
+}
+.bg-lightred{
+    background-color: rgba(214, 33, 0, 0.2);
+}
+.bg-lightblue{
+    background-color: rgba(133, 169, 255, 0.35);
+}
+.bg-orange{
+    background-color: #f26f21;
+}
+.bg-light-orange{
+    background-color: #fbad47;
+}
+
+body {
+    background-color: #fff !important;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, tr, td, th, a{
+    font-family: "Titillium web" !important;
+}
+
+.header-navbar-transparent.header-navbar-fixed.header-navbar-scroll #header-navbar {
+    background-color: transparent !important;
+}
+
+.mt-10 {
+     margin-top: 10px;
+ }
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+#sidebar {background-color: #101010 !important;}
+
+#main-container {background-color: #fff !important;}
+
+a.orange {color: #f26f21 !important;}
+
+a.orangehover {color: #b9551a !important;}
+
+.btn-orange {
+    background-color: #f26f21;
+    color: #fff !important;}
+
+.btn-orange:hover {
+
+    background-color: #b9551a;
+    color: #ddd !important;}
+
+.nav-header.pull-right > li {
+
+}
+
+i.fa.action {
+    color: #666666;
+}
+
+i.fa.action:hover {
+    color: #333333;
+}
+
+i.fa.danger {
+    color: darkred;
+}
+
+i.fa.danger:hover {
+    color: red;
+}
+.side-content{
+    padding-left: 14px !important;
+}
+
+.table-header-orange > thead > tr > th, .table-header-orange > thead > tr > td{
+    color: #ffff !important;
+    background-color: #f26f21 !important;
+    border-bottom-color: #f26f21 !important;
+}
+
