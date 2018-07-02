@@ -5,16 +5,12 @@
 <head>
     <meta charset="utf-8">
 
-    <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
-
-    <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
-    <meta name="author" content="pixelcave">
-    <meta name="robots" content="noindex, nofollow">
+    <title>Ingresar</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
 
     <!-- Icons -->
     <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="assets/img/favicons/favicon.png">
+    <link rel="shortcut icon" href="http://www.iconarchive.com/download/i82447/medicalwp/medical/Health-Sign-red.ico">
 
     <link rel="icon" type="image/png" href="assets/img/favicons/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="assets/img/favicons/favicon-32x32.png" sizes="32x32">
@@ -54,8 +50,8 @@
                 <div class="push-30-t push-50 animated fadeIn">
                     <!-- Login Title -->
                     <div class="text-center">
-                        <i class="fa fa-2x fa-circle-o-notch text-primary"></i>
-                        <p class="text-muted push-15-t">A perfect match for your project</p>
+                        <i class="fa fa-2x fa-plus-square text-primary"></i>
+                        <p class="text-muted push-15-t">CONSULTORIO | INGRESAR</p>
                     </div>
                     <!-- END Login Title -->
 
@@ -80,7 +76,7 @@
                                 <div class="form-material form-material-primary floating">
                                     <input id="login-username" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                     {{--<input class="form-control" type="text" id="login-username" name="login-username">--}}
-                                    <label for="login-username">Username</label>
+                                    <label for="login-username">Email</label>
                                 </div>
                             </div>
                         </div>
@@ -89,27 +85,27 @@
                                 <div class="form-material form-material-primary floating">
                                     <input id="login-password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                                     {{--<input class="form-control" type="password" id="login-password" name="login-password">--}}
-                                    <label for="login-password">Password</label>
+                                    <label for="login-password">Contraseña</label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-xs-6">
                                 <label class="css-input switch switch-sm switch-primary">
-                                    <input id="login-remember-me"  type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}><span></span>{{ __('Remember Me') }}
+                                    <input id="login-remember-me"  type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}><span></span>{{ __('Recordarme') }}
                                     {{--<input type="checkbox" id="login-remember-me" name="login-remember-me"><span></span> Remember Me?--}}
                                 </label>
                             </div>
                             <div class="col-xs-6">
                                 <div class="font-s13 text-right push-5-t">
                                     {{--<a class="btn btn-link" href="{{ route('password.request') }}">--}}
-                                    <a href="{{ route('password.request') }}">Forgot Password?</a>
+                                    <a href="{{ route('password.request') }}">¿Olvidaste la contraseña?</a>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group push-30-t">
                             <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                                <button class="btn btn-sm btn-block btn-primary" type="submit">Log in</button>
+                                <button class="btn btn-sm btn-block btn-primary" type="submit">Ingresar</button>
                             </div>
                         </div>
                     </form>
@@ -123,7 +119,7 @@
 
 <!-- Login Footer -->
 <div class="pulldown push-30-t text-center animated fadeInUp">
-    <small class="text-muted"><span class="js-year-copy"></span> &copy; OneUI 3.2</small>
+    <small class="text-muted">DV &copy; 2018</small>
 </div>
 <!-- END Login Footer -->
 

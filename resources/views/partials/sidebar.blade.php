@@ -1,3 +1,4 @@
+@php $user = \Illuminate\Support\Facades\Auth::user(); @endphp
 <nav id="sidebar">
     <!-- Sidebar Scroll Container -->
     <div id="sidebar-scroll">
@@ -24,11 +25,10 @@
             <!-- Side Content -->
             <div class="side-content side-content-full">
                 <ul class="nav-main">
-                    @php $user = \Illuminate\Support\Facades\Auth::user(); @endphp
+                    <li class="open">
+                        <a ><i style="margin-right: 15px; color: #0f8496;" class="fa fa-2x fa-plus-square"></i><span class="sidebar-mini-hide">CONSULTORIO</span></a>
+                    </li>
                     @if(!is_null($user))
-                        <li class="open">
-                            <a ><i style="margin-right: 15px; color: #0f8496;" class="fa fa-2x fa-plus-square"></i><span class="sidebar-mini-hide">CONSULTORIO</span></a>
-                        </li>
                         {{-- PACIENTE --}}
                         @if($user->isAllowed(1))
                             <li>
@@ -39,7 +39,6 @@
                             </li>
                         @endif
                         {{-- END PACIENTE --}}
-
 
                         @if($user->getUserRoleId() >= 2)
                             {{-- SECRETARIA --}}
@@ -64,7 +63,6 @@
                             {{-- END ADMIN --}}
                         @endif
 
-
                         {{-- ADMIN --}}
                         @if($user->isAllowed(4))
                             <li>
@@ -81,6 +79,16 @@
                                 <a href="{{ route('logout') }}"><i style="margin-right: 15px;" class="fa fa-2x fa-sign-out"></i><span class="sidebar-mini-hide">Cerrar Sesión</span></a>
                             </li>
                         @endif
+                    @else
+                        <li>
+                            <a href="../login"><i class="fa fa-2x fa-sign-in"></i><span class="sidebar-mini-hide">Ingresar</span></a>
+                        </li>
+                        <li>
+                            <a href="../register"><i class="fa fa-2x fa-user-o"></i><span class="sidebar-mini-hide">Registrarse</span></a>
+                        </li>
+                        <li>
+                            <a href="{{ route('faq') }}"><i style="margin-right: 25px !important; margin-left: 5px !important;" class="fa fa-2x fa-question"></i><span class="sidebar-mini-hide">FAQ</span></a>
+                        </li>
                     @endif
                 </ul>
             </div>

@@ -17,7 +17,7 @@
     </style>
     <div class="block block-bordered">
         <div class="block-header bg-gray-lighter" style="border-bottom: 0">
-            <a href="{{ route("patient.shifts.index") }}"><span>PACIENTE > MIS TURNOS</span></a>
+            <a href="{{ route("admin.index") }}"><span>USUARIOS</span></a>
         </div>
         <div class="block-content" style="padding: 0 35px">
             <table class="table table-borderless table-hover">
@@ -29,6 +29,7 @@
                     <th>Email</th>
                     <th>DNI</th>
                     <th>Cobertura Médica</th>
+                    <th>ACCIONES</th>
                 </tr>
                 </thead>
 
@@ -40,11 +41,15 @@
                     <td>{{ $each->role->role }}</td>
                     <td>{{ $each->email }}</td>
                     <td>{{ $each->dni }}</td>
-                    <td>{{ $each->prepaid }}</td>
+                    <td>{{ $each->getUserPrepaid() }}</td>
+
                     <td>
                         <div class="btn-group">
                             <div class="btn-group">
-                                <a href="{{ route("admin.users.edit", $each->id) }}"><i class="fa fa-lg action fa-search"></i></a>
+                                <a href="{{ route("admin.users.edit", $each->id) }}" style="padding-right: 10px;"><i class="fa fa-lg action fa-pencil-square-o"></i></a>
+                                @if($each->getUserRoleId() < 4)
+                                    <a href="{{ route("admin.users.destroy", $each->id) }}"><i class="fa fa-lg action fa-trash-o"></i></a>
+                                @endif
                             </div>
                         </div>
                     </td>

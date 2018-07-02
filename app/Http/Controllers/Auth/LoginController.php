@@ -45,10 +45,10 @@ class LoginController extends Controller
                 return '/patient';
                 break;
             case 2:
-                return '/secretary/users';
+                return '/secretary';
                 break;
             case 3:
-                return '/doctor/users';
+                return '/doctor';
                 break;
             case 4:
                 return '/admin';

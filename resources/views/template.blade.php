@@ -15,13 +15,15 @@
         <div class="content animated fadeIn">
             @include('partials.notifications')
             <div class="row" style="margin-top: 25px;">
+                @if(!is_null($loggedUser) && strcmp($_SERVER["REQUEST_URI"], "/tpseguridad/"))
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-bottom: 12px; color:green;">
-                        <p style="color: black;">{{ $loggedUser->role->role }}</p>
-                        <p>{{ $loggedUser->name }}</p>
-                        <p>{{ $loggedUser->email }}</p>
+                        <h1 style="color: black;">{{ $loggedUser->name }}</h1>
+                        <h2 style="font-size: 20px;">{{ $loggedUser->role->role }}</h2>
+                        <h3 style="font-size: 20px; color: #9d9de0;">{{ $loggedUser->email }}</h3>
                     </div>
                 </div>
+                @endif
                 @yield('main')
             </div>
         </div>

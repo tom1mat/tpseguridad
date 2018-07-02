@@ -31,6 +31,10 @@ class User extends Authenticatable
         return $this->hasOne(Role::class,'id', 'role_id');
     }
 
+    public function prepaid(){
+        return $this->hasOne(Prepaid::class, 'id', 'prepaid_id');
+    }
+
     public function isAllowed($roleId){
         if($roleId == $this->role->id)
             return true;
@@ -46,16 +50,16 @@ class User extends Authenticatable
         return $this->role->id;
     }
 
+    public function getUserPrepaid(){
+        return $this->prepaid['prepaid'];
+    }
+
     public function patientShifts(){
         return $this->hasMany(Shift::class, 'patient_id');
     }
 
     public function doctorShifts(){
         return $this->hasMany(Shift::class, 'doctor_id');
-    }
-
-    public function prepaid(){
-        return $this->hasOne(Prepaid::class, 'id', 'prepaidId');
     }
 
 }

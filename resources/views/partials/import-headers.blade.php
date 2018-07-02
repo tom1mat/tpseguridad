@@ -1,12 +1,12 @@
 <meta charset="utf-8">
 
-<title>E-catalog</title>
+<title>Consultorio</title>
 
 <meta name="description" content="E-catalog">
 <meta name="author" content="Bits0">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
-<link rel="icon" href="https://www.bits0.com/images/favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="http://www.iconarchive.com/download/i82447/medicalwp/medical/Health-Sign-red.ico" type="image/x-icon"/>
 
 
 <!-- Stylesheets -->
