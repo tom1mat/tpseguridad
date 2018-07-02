@@ -98,14 +98,14 @@
                     <div class="form-group">
                         <div class="col-xs-6">
                             <div class="form-material form-material-primary floating">
-                                <input id="register-usuario" type="text" class="form-control{{ $errors->has('usuario') ? ' is-invalid' : '' }}" name="usuario" value="{{ old('usuario') }}" required autofocus>
+                                <input id="register-name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
                                 {{--<input class="form-control" type="text" id="login-username" name="login-username">--}}
-                                <label for="register-usuario">Usuario</label>
+                                <label for="register-name">Nombre y Apellido</label>
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="form-material form-material-primary floating">
-                                <input id="register-dni" type="text" class="form-control{{ $errors->has('dni') ? ' is-invalid' : '' }}" name="dni" required>
+                                <input id="register-dni" type="text" class="form-control{{ $errors->has('dni') ? ' is-invalid' : '' }}" name="dni" value="{{ old('dni') }}" required>
                                 {{--<input class="form-control" type="password" id="login-password" name="login-password">--}}
                                 <label for="register-dni">DNI</label>
                             </div>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="col-xs-6">
                             <div class="form-material form-material-primary floating">
-                                <input id="register-rep-password" type="password" class="form-control{{ $errors->has('rep-password') ? ' is-invalid' : '' }}" name="rep-password" required>
+                                <input id="register-rep-password" type="password" class="form-control{{ $errors->has('rep-password') ? ' is-invalid' : '' }}" name="password_confirmation" required>
                                 {{--<input class="form-control" type="password" id="login-password" name="login-password">--}}
                                 <label for="register-rep-password">Confirmar Contraseña</label>
                             </div>
