@@ -15,4 +15,13 @@ class DoctorController extends Controller
 
         return view("doctor.users.index", compact('users', 'doctor'));
     }
+
+    public function edit($id){
+        $user = User::find($id);
+
+        if($user)
+            return view ('doctor.users.edit');
+        else
+            return redirect()->back()->withErrors("Error, no existe el usuario $id");
+    }
 }

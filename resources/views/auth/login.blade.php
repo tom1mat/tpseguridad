@@ -74,9 +74,9 @@
                         <div class="form-group">
                             <div class="col-xs-12">
                                 <div class="form-material form-material-primary floating">
-                                    <input id="login-username" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                    <input id="login-email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                     {{--<input class="form-control" type="text" id="login-username" name="login-username">--}}
-                                    <label for="login-username">Email</label>
+                                    <label for="login-email">Email</label>
                                 </div>
                             </div>
                         </div>

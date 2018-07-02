@@ -10,7 +10,6 @@ class AdminController extends Controller
     public function index(){
         $usersArray = User::all();
 
-
         return view('admin.users.index', compact('usersArray'));
     }
 

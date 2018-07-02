@@ -14,4 +14,6 @@ class PatientController extends Controller
 
         return view("patient.shifts.index", compact('shiftsArray', 'patient'));
     }
+
+    // Obtener el día de la semana a traves de una fecha: date("w",strtotime(fecha_que_quieras))
 }

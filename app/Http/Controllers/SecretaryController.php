@@ -15,4 +15,13 @@ class SecretaryController extends Controller
 
         return view("secretary.users.index", compact('users', 'secretary'));
     }
+
+    public function edit($id){
+        $user = User::find($id);
+
+        if($user)
+            return view ('secretary.users.edit');
+        else
+            return redirect()->back()->withErrors("Error, no existe el usuario $id");
+    }
 }

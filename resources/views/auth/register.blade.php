@@ -68,47 +68,62 @@
                             <strong>{{ $errors->first('password') }}</strong>
                         </span>
                     @endif
+                    @if ($errors->has('usuario'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('usuario') }}</strong>
+                        </span>
+                    @endif
+                    @if ($errors->has('dni'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('dni') }}</strong>
+                        </span>
+                    @endif
+                    @if ($errors->has('rep-password'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('rep-password') }}</strong>
+                        </span>
+                    @endif
                     {{--<form class="js-validation-login form-horizontal push-30-t" action="base_pages_dashboard.html" method="post">--}}
-                    <form class="js-validation-login form-horizontal push-30-t"" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                    <form class="js-validation-login form-horizontal push-30-t" method="POST" action="{{ route('register') }}" aria-label="{{ __('register') }}">
                     @csrf
                     <div class="form-group">
                         <div class="col-xs-12">
                             <div class="form-material form-material-primary floating">
-                                <input id="login-username" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="register-email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
                                 {{--<input class="form-control" type="text" id="login-username" name="login-username">--}}
-                                <label for="login-username">Email</label>
+                                <label for="register-email">Email</label>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-6">
                             <div class="form-material form-material-primary floating">
-                                <input id="login-username" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="register-usuario" type="text" class="form-control{{ $errors->has('usuario') ? ' is-invalid' : '' }}" name="usuario" value="{{ old('usuario') }}" required autofocus>
                                 {{--<input class="form-control" type="text" id="login-username" name="login-username">--}}
-                                <label for="login-username">Usuario</label>
+                                <label for="register-usuario">Usuario</label>
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="form-material form-material-primary floating">
-                                <input id="login-password" type="text" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="register-dni" type="text" class="form-control{{ $errors->has('dni') ? ' is-invalid' : '' }}" name="dni" required>
                                 {{--<input class="form-control" type="password" id="login-password" name="login-password">--}}
-                                <label for="login-password">DNI</label>
+                                <label for="register-dni">DNI</label>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-xs-6">
                             <div class="form-material form-material-primary floating">
-                                <input id="login-password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="register-password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
                                 {{--<input class="form-control" type="password" id="login-password" name="login-password">--}}
-                                <label for="login-password">Contraseña</label>
+                                <label for="register-password">Contraseña</label>
                             </div>
                         </div>
                         <div class="col-xs-6">
                             <div class="form-material form-material-primary floating">
-                                <input id="login-password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="register-rep-password" type="password" class="form-control{{ $errors->has('rep-password') ? ' is-invalid' : '' }}" name="rep-password" required>
                                 {{--<input class="form-control" type="password" id="login-password" name="login-password">--}}
-                                <label for="login-password">Confirmar Contraseña</label>
+                                <label for="register-rep-password">Confirmar Contraseña</label>
                             </div>
                         </div>
                     </div>

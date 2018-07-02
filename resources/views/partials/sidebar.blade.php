@@ -50,7 +50,7 @@
                             {{-- DOCTOR --}}
                             @elseif($user->isAllowed(3))
                                 <li>
-                                    <a href="{{ route('doctor.users.index') }}"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Usuarios</span></a>
+                                    <a href="{{ route('doctor.users.index') }}"><i class="fa fa-2x fa-users"></i><span class="sidebar-mini-hide">Pacientes</span></a>
                                 </li>
                             {{-- END DOCTOR --}}
 

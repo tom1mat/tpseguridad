@@ -1,44 +1,30 @@
 @extends('template')
 
 @section('main')
-    <style>
-        textarea{
-            height: 110px !important;
-        }
-        .bg-gray-lighter > a{
-            color: #0b0b0b;
-            font-weight: bold;
-        }
-    </style>
     <div class="block block-bordered">
         <div class="block-header bg-gray-lighter" style="border-bottom: 0">
-            <a href="{{ route("patient.shifts.create") }}"><span>PACIENTE > NUEVO TURNO</span></a>
+            <a href="{{ route("patient.shifts.index") }}"><span>MIS TURNOS > NUEVO TURNO</span></a>
         </div>
         <div class="block-content" style="padding: 0 35px">
-            <div class="row">
-                {{ Form::open(['route' => 'patient.shifts.create', 'method' => 'POST']) }}
-                <div class="col-sm-12">
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label>Type</label><br>
-                            {{--{!! Form::select('dynamicDataTypeId', $dynamicDataTypes, null, ['id'=>'formDynamic', 'class'=> 'form-control input-lg'] ) !!}--}}
-                        </div>
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="form-group" id="dynamicValue">
-                            <label>Data</label>
-                            <textarea class="form-control input-lg" type="value" name="value" required></textarea>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="col-sm-1">
-                        <button style="margin: auto; display: block" type="submit" class="btn btn-orange mb-20">Add Dynamic</button>
-                    </div>
+            <div class="block block-bordered">
 
-                {{ Form::close() }}
-                <!-- END DYNAMIC DATA -->
+                <div class="block-content">
+                    <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Nuevo Turno</h3>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <button class="btn btn-success" type="submit"><i class="fa fa-check push-5-r"></i> Solicitar</button>
+                                <button class="btn btn-danger" type="submit"><i class="fa fa-remove push-5-r"></i> Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> <!-- End Block content -->
+    </div><!-- End Block bordered -->
 @endsection
